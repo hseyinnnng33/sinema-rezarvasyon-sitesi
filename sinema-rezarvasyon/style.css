@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Asap&family=Black+Han+Sans&family=Faster+One&family=Inter&family=Lexend+Deca:wght@600&family=Manrope&family=Nosifer&family=Orienta&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,900&family=Russo+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+#genel{
+    min-height: 100vh;
+    background-color: #f1f1f1;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+nav{
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+}
+
+nav .icerik{
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .icerik h2{
+    font-size: 20px;
+}
+
+nav .icerik h2 span{
+    font-size: 20px;
+    color: #b36cd2;
+    font-weight: bold;
+}
+
+nav .icerik ul{
+    list-style: none;
+    display: flex;
+    margin-left: 90px;
+}
+
+nav .icerik ul li {
+    padding: 0 20px;
+}
+
+nav .icerik ul li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+nav .icerik .input{
+    border-radius: 10px;
+    padding-right: 10px;
+    background-color: #e9ebed;
+}
+
+nav .icerik .input input{
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-weight: 600;
+    background-color: #e9ebed;
+}
+
+.secili_secenek{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.secili_secenek div{
+   width: auto;
+   height: auto;
+   display: flex;
+   margin: 10px;
+   align-items: center;
+   font-weight: 600;
+}
+
+.secili_secenek div span{
+   display: block;
+   width: 25px;
+   height: 25px;
+   margin: 5px;
+   border-radius: 10px;
+}
+
+.genel{
+    width: 100%;
+    background-color: #fff;
+    padding-top: 20px;
+}
+
+.film{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+ 
+.film .sol_tanitim{
+    display: flex;
+}
+
+.film .sol_tanitim img{
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.film .sol_tanitim .film_bilgiler{
+    margin-left: 10px;
+}
+
+.film .sol_tanitim .film_bilgiler h2{
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.film .sol_tanitim .film_bilgiler p{
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.film .sol_tanitim .film_bilgiler .tarih{
+    font-weight: bold;
+}
+
+.container{
+    width: 370px;
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-left: -110px; */
+}
+
+.container .kutu{
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    margin: 3px;
+    border: 3px solid #c7d5d5;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    text-align: center;
+}
+
+.container .kutu.active{
+    background-color: #f8e71c;
+}
+
+.container .kutu:hover{
+    background-color: #f8e71c;
+}
+
+.sag{
+    background-color: #e9ebed;
+    width: 250px;
+    max-height: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.fiyat_kutu p{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sag{
+    position: relative;
+    text-align: center;
+}
+
+.fiyat_yazi{
+    display: flex;
+    margin: 5px 0;
+    justify-content: center;
+}
+
+.fiyat_yazi h2{
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.alinan_koltuklar{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.alinan_koltuklar .secili_koltuklar{
+    width: 30px;
+    height: 30px;
+    background-color: #f8e71c;
+    color: #333;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.alinan_koltuklar .secili_koltuklar::after {
+    content: "-";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.alinan_koltuklar .secili_koltuklar:hover::after {
+    opacity: 1;
+}
+  
+.alinan_koltuklar .secili_koltuklar:hover {
+    color: transparent;
+}
+
+.alinan_koltuklar .secili_koltuklar:hover::after {
+    color: #333;
+}
+
+.al_btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    cursor: pointer;
+    background-color: #5e58e9;
+    font-size: 20px;
+    color: #fff;
+    padding: 5px 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+}
+
+.kutu.mavi{
+    border: 3px solid #0077ff;
+}
+
+.kutu.dolu{
+    background-color: #ff4061;
+    pointer-events: none;
+}
+
+.toplam_fiyat{
+    position: absolute;
+    bottom: 12%;
+    left: 45%;
+}
+
+.toplam_fiyat_h2{
+    font-size: 18px;
+}
+
+.filmleri_goster{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filmleri_goster .film_1{
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    position: relative;
+}
+
+.filmleri_goster .film_1 .bilgi{
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    justify-content: space-around;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.filmleri_goster .film_1 img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.reyting{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 5px;
+    color: #333;
+    background-color: #fff;
+}
